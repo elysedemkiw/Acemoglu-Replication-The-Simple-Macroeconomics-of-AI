@@ -44,10 +44,10 @@ Acemoglu sets *how big*; BTOS sets *how much of it is switched on yet*. The ceil
 | Name | Meaning | Value / how obtained |
 |---|---|---|
 | `exposure` | share of tasks exposed to AI | 0.20[^eloundou] |
-| `profitable_share` | of those, share worth automating in ~10y | 0.23[^svanberg] |
+| `profitable_share` | of those, share worth automating in 10y | 0.23[^svanberg] |
 | `cost_savings` | labor-cost saving per automated task | 0.27[^savings] |
 | `labor_share` | labor's share of total cost (α in Acemoglu eq. 14) | 0.53 |
-| `ceiling` | eventual TFP gain at full adoption | `exposure·profitable_share·cost_savings·labor_share` ≈ **0.66%** |
+| `ceiling` | eventual TFP gain at full adoption | `exposure·profitable_share·cost_savings·labor_share` = **0.66%** |
 | `A["rate"]` | firm AI-adoption rate over time (`A_t`) | BTOS[^btos] |
 | `L` | adoption **saturation** (eventual share of firms) | **fitted but fragile**[^L]; or set as a scenario |
 | `k` | diffusion **speed** (logistic steepness) | least-squares fit; well-identified[^L] |
