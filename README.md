@@ -2,9 +2,9 @@
 # Realized AI Productivity Gains
 ### Anchoring Acemoglu's Task-Based TFP Ceiling to BTOS Firm-Adoption Data
 
-**One-line summary.** Acemoglu (2024) estimates the TFP gain AI will eventually deliver *at full adoption*; this project anchors that ceiling to real adoption data (U.S. Census BTOS) to ask **how much of that gain has actually been realized so far, and on what trajectory.**
+Acemoglu (2024) estimates the TFP gain AI will eventually deliver *at full adoption*; this project a) reproduces that result given the author'soriginal parameters and b) anchors that ceiling to real adoption data from US Census Business Trends and Outlooks Survey to ask **how much of that gain has actually been realized so far, and on what trajectory.**
 
-**Headline finding.** At today's ~10% firm adoption, the U.S. economy has realized only about a **tenth** of AI's eventual TFP gain — and how large that fraction is depends almost entirely on where adoption ultimately **saturates**, which the data cannot yet pin down. *Speed is well-identified; the ceiling is a scenario.*
+**Main finding:** at today's approx 10% firm adoption, the US economy has realized only about a **tenth** of AI's eventual TFP gain, and how large that fraction is depends almost entirely on where adoption ultimately **saturates**, which the data cannot yet pin down. *Speed is well-identified; the ceiling is a scenario dependent on those four parameters (part 1).*
 
 ---
 
@@ -12,8 +12,8 @@
 
 | Piece | Supplies | Source |
 |---|---|---|
-| **Ceiling** | the *size* of the eventual prize — TFP gain at full adoption (~0.66% over a decade) | Acemoglu's task model[^acemoglu] |
-| **Trajectory** | the *status & speed* of adoption — how far we've actually climbed | BTOS firm-adoption rate[^btos] |
+| **Ceiling** | the *size* of the eventual TFP gain at full adoption (approx 0.66% over a decade) | Acemoglu's task model[^acemoglu] |
+| **Trajectory** | the *status & speed* of adoption or how far we've actually climbed | BTOS firm-adoption rate[^btos] |
 
 The whole model is one multiplication:
 
@@ -82,7 +82,7 @@ Re-fits the speed under **low / medium / high** assumed saturation `L`, since `L
 *Functions:* `fit_fixed_L(L)`.
 
 ### 7 · Feeding the shock into a compact gap model *(exclusively illustrative)*
-Pours the quarterly shock into a small backward-looking 3-equation New-Keynesian model (Phillips / IS / Taylor) to *visualize* the channel: AI lowers costs → inflation dips → the central bank eases → output booms → reverts as adoption saturates. **Not robust by design**[^gap] — parameters are assumed and `lam` is cranked for visibility; only the *direction* is meaningful.
+Pours the quarterly shock into a small backward-looking 3-equation New-Keynesian model (Phillips / IS / Taylor) to *visualize* the channel: AI lowers costs → inflation dips → the central bank eases → output booms → reverts as adoption saturates. **Not robust by design**[^gap] parameters are assumed and `lam` is cranked for visibility; only the *direction* is meaningful.
 
 ---
 
@@ -101,20 +101,20 @@ Pours the quarterly shock into a small backward-looking 3-equation New-Keynesian
 
 ## 6. Extensions / future work
 
-- **Task-level Hulten weighting** — replace the scalar chain with O\*NET tasks weighted by BLS employment shares, rather than economy-wide averages.
-- **Split the cost-savings channel** — separate automation from task-complementarity (same TFP, opposite wage effects) to recover Acemoglu's distributional results; requires moving beyond a representative-agent frame.
-- **Ground `cost_savings` in data** — use the EI "primitives" (`human_with_ai_time` vs `human_only_time` per task) instead of borrowing Acemoglu's 27%.
-- **Better adoption series** — chain-link the BTOS narrow→broad break (if an overlap period exists), or SOC-aggregate the EI breadth measure to defeat the granularity confound.
-- **Real Stage 3** — replace the toy gap model with the forward-looking QPM (EViews/Dynare) for credible magnitudes.
+- **Task-level Hulten weighting** — replace the scalar chain with O\*NET tasks weighted by BLS employment shares, rather than economy-wide averages
+- **Split the cost-savings channel** — separate automation from task-complementarity (same TFP, opposite wage effects) to recover Acemoglu's distributional results; requires moving beyond a representative-agent frame
+- **Ground `cost_savings` in data** — use the EI "primitives" (`human_with_ai_time` vs `human_only_time` per task) instead of Acemoglu's 27%
+- **Better adoption series** — chain-link the BTOS narrow→broad break (if an overlap period exists), or SOC-aggregate the EI breadth measure to defeat the granularity confound
+- **Real Stage 3** — replace the toy gap model with the forward-looking QPM (EViews/Dynare) for credible magnitudes
 
 ---
 
 ## 7. Caveats & honest limits
 
-1. **Speed known, ceiling unknown.** `k` is identified from the rise; `L` is not (no plateau in the data), and `L` drives "how far along" we are.[^L]
-2. **The ceiling itself is contested.** Acemoglu's ~0.66% is a conservative back-of-envelope; the optimists assume far higher exposure and savings (see Section 2).
-3. **BTOS definition break.** The AI question switched from "produce goods or services" (~10%) to "any business function" (~18%) in late 2025; this project uses the **narrow** series for consistency and does **not** splice the two.[^break]
-4. **The gap model is illustrative only.**[^gap]
+1. **Speed known, ceiling unknown.** `k` is identified from the rise; `L` is not (no plateau in the data), and `L` drives "how far along" we are [^L]
+2. **The ceiling itself is contested.** Acemoglu's 0.66% is a conservative back-of-envelope; the optimists assume far higher exposure and savings (see Section 2)
+3. **BTOS definition break.** The AI question switched from "produce goods or services" (~10%) to "any business function" (~18%) in late 2025; this project uses the **narrow** series for consistency and does **not** splice the two [^break]
+4. **The gap model is illustrative only**[^gap]
 
 ---
 
