@@ -32,11 +32,12 @@ Acemoglu sets *how big*; BTOS sets *how much of it is switched on yet*. The ceil
 |---|---|---|
 | **U.S. Census BTOS**[^btos] | the adoption series `A_t` (share of firms using AI, biweekly) | **narrow** "produce goods or services" wording, 09/2023–10/2025; see definition-break caveat[^break] |
 | **Acemoglu (2024)**[^acemoglu] | the ceiling formula + its three input parameters | back-of-envelope via Hulten's theorem |
-| ↳ Eloundou et al. (2023)[^eloundou] | task **exposure** (~20%) | "GPTs are GPTs" |
-| ↳ Svanberg et al. (2024)[^svanberg] | **profitable-automation** share (~23%) | "Beyond AI Exposure" |
-| ↳ Noy–Zhang (2023); Brynjolfsson et al. (2023)[^savings] | **cost savings** per task (~27% of labor cost) | RCT estimates |
+| ↳ Eloundou et al. (2023)[^eloundou] | task **exposure** (approx 20%) | "GPTs are GPTs" |
+| ↳ Svanberg et al. (2024)[^svanberg] | **profitable-automation** share (approx 23%) | "Beyond AI Exposure" |
+| ↳ Noy–Zhang (2023); Brynjolfsson et al. (2023)[^savings] | **cost savings** per task (approx 27% of labor cost) | RCT estimates |
 | **Anthropic Economic Index**[^aei] | the (abandoned) Section-3 adoption-speed proxy | open on Hugging Face, CC-BY |
 
+**Note:** can toggle with parameters
 ---
 
 ## 3. Variables & parameters
